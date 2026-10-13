@@ -6,12 +6,12 @@
     <title>MediaNest - Privacy Policy</title>
     <style>
         :root {
-            --primary-color: #6366f1;
+            --primary-color: #a78bfa;
             --background-color: #0f172a;
             --card-background: #1e293b;
             --text-color: #f8fafc;
             --text-muted: #94a3b8;
-            --accent-color: #818cf8;
+            --accent-color: #c4b5fd;
             --border-color: #334155;
         }
 
@@ -25,21 +25,26 @@
         }
 
         .header {
-            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-            padding: 3rem 1.5rem;
+            background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #c084fc 100%);
+            padding: 3.5rem 1.5rem;
             text-align: center;
+            box-shadow: 0 4px 20px rgba(168, 85, 247, 0.25);
         }
 
         .header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 2.6rem;
             font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
 
         .header p {
-            margin-top: 0.5rem;
-            font-size: 1.1rem;
-            color: #e0e7ff;
+            margin-top: 0.6rem;
+            font-size: 1.15rem;
+            color: #f3e8ff;
+            font-weight: 500;
         }
 
         .container {
@@ -51,10 +56,10 @@
         .card {
             background-color: var(--card-background);
             border: 1px solid var(--border-color);
-            border-radius: 12px;
+            border-radius: 16px;
             padding: 2rem;
             margin-bottom: 2rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
         h2 {
@@ -62,7 +67,7 @@
             font-size: 1.5rem;
             margin-top: 0;
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 0.5rem;
+            padding-bottom: 0.6rem;
         }
 
         h3 {
@@ -85,10 +90,10 @@
         }
 
         .highlight {
-            background-color: rgba(99, 102, 241, 0.15);
+            background-color: rgba(168, 85, 247, 0.12);
             border-left: 4px solid var(--primary-color);
             padding: 1rem;
-            border-radius: 4px;
+            border-radius: 6px;
             margin: 1rem 0;
         }
 
@@ -103,6 +108,7 @@
         a {
             color: var(--accent-color);
             text-decoration: none;
+            font-weight: 600;
         }
 
         a:hover {
@@ -121,7 +127,7 @@
 
         <div class="card">
             <h2>Overview</h2>
-            <p><strong>Effective Date:</strong> September 14, 2026</p>
+            <p><strong>Effective Date:</strong> October 13, 2026</p>
             <p>Welcome to <strong>MediaNest</strong>. Your privacy is our top priority. MediaNest is designed as a privacy-first, local-first media player and manager. We believe your personal media—your photos, videos, and music—should remain private and under your complete control.</p>
 
             <div class="highlight">
@@ -131,65 +137,55 @@
 
         <div class="card">
             <h2>Device Permissions & Usage</h2>
-            <p>To provide advanced media playback, floating picture-in-picture, and hidden folder scanning, MediaNest requests the following device permissions:</p>
+            <p>To provide media playback, floating picture-in-picture, audio visualization, and folder scanning, MediaNest requests the following permissions:</p>
 
-            <h3>1. Media & Storage Access (`READ_MEDIA_*` / `READ_EXTERNAL_STORAGE`)</h3>
+            <h3>1. Granular Media Access (`READ_MEDIA_IMAGES`, `READ_MEDIA_VIDEO`, `READ_MEDIA_AUDIO`)</h3>
             <ul>
-                <li><strong>Purpose:</strong> Used via Android MediaStore API to scan, index, organize, and play your local photos, videos, and audio files.</li>
-                <li><strong>Data Handling:</strong> All file scanning and playback occurs strictly on your device using standard MediaStore APIs. No file content is ever transmitted over the internet.</li>
+                <li><strong>Purpose:</strong> Used via Android's native MediaStore API to scan, index, organize, and play your local photos, videos, and audio files.</li>
+                <li><strong>Data Handling:</strong> All media indexing and playback occurs strictly on your device. No file content or personal media is ever uploaded or transmitted over the internet.</li>
             </ul>
 
             <h3>2. Audio Recording / Microphone (`RECORD_AUDIO`)</h3>
             <ul>
-                <li><strong>Purpose:</strong> Used exclusively to render real-time audio visualizer effects and equalizer frequency spectrums during music playback.</li>
-                <li><strong>Data Handling:</strong> Audio input is processed transiently in device memory only. No audio is ever recorded, stored, or transmitted.</li>
+                <li><strong>Purpose:</strong> Used exclusively to analyze real-time audio frequency waveforms for rendering live audio visualizers during music playback.</li>
+                <li><strong>Data Handling:</strong> Audio frequency data is processed transiently in device RAM only. No audio is ever recorded, saved, or uploaded.</li>
             </ul>
 
             <h3>3. Foreground Service (`FOREGROUND_SERVICE_MEDIA_PLAYBACK`)</h3>
             <ul>
-                <li><strong>Purpose:</strong> Ensures uninterrupted background audio playback and supports floating video playback (Picture-in-Picture) when switching between apps or when the screen is turned off.</li>
+                <li><strong>Purpose:</strong> Enables uninterrupted background audio playback and floating picture-in-picture (PiP) video playback when using other apps or when the screen is off.</li>
             </ul>
 
             <h3>4. Bluetooth & System Notifications</h3>
             <ul>
-                <li><strong>Bluetooth (`BLUETOOTH_CONNECT`):</strong> Used to detect connected wireless headphones or Bluetooth audio devices for media routing.</li>
-                <li><strong>Notifications (`POST_NOTIFICATIONS`):</strong> Displays playback controls (play, pause, skip, album art) in the device notification shade and lock screen.</li>
+                <li><strong>Bluetooth (`BLUETOOTH_CONNECT`):</strong> Detects connected wireless headphones or Bluetooth audio devices for seamless media routing.</li>
+                <li><strong>Notifications (`POST_NOTIFICATIONS`):</strong> Displays active playback controls (play, pause, skip, artwork) in your notification shade and lock screen.</li>
             </ul>
         </div>
 
         <div class="card">
-            <h2>Analytics</h2>
-            <p>MediaNest uses <strong>Google Firebase Analytics</strong> to gather anonymous usage statistics, crash logs, and performance metrics. This data helps us improve app stability and optimize playback across various Android devices.</p>
+            <h2>Analytics & Telemetry</h2>
+            <p>MediaNest uses <strong>Google Firebase Analytics</strong> to collect anonymous usage metrics and crash diagnostics to help improve app stability and playback performance across Android devices.</p>
             <ul>
-                <li><strong>No Personal Information:</strong> Firebase Analytics does not track your personal media files, photos, videos, or personally identifiable data.</li>
-                <li><strong>User Opt-Out:</strong> You can enable or disable Analytics at any time directly in the app under <strong>Settings > Telemetry & Analytics</strong>.</li>
+                <li><strong>No Personal Information:</strong> Firebase Analytics does not track or store your media files, filenames, photos, or personally identifiable data.</li>
+                <li><strong>User Opt-Out:</strong> You can enable or disable anonymous analytics at any time directly inside the app under <strong>Settings > Anonymous Telemetry & Analytics</strong>.</li>
             </ul>
         </div>
 
         <div class="card">
             <h2>Children's Privacy</h2>
-            <p>MediaNest does not knowingly collect or solicit personal information from children under the age of 13. The app is a local utility designed for general audiences.</p>
+            <p>MediaNest does not knowingly collect or solicit personal information from children under the age of 13. The app is a local utility media player designed for general audiences.</p>
         </div>
 
         <div class="card">
             <h2>Changes to This Policy</h2>
-            <p>We may update our Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date.</p>
+            <p>We may update our Privacy Policy periodically. Any changes will be published on this page with an updated effective date.</p>
         </div>
 
         <div class="card">
             <h2>Contact Us</h2>
             <p>If you have any questions, suggestions, or privacy concerns regarding MediaNest, please contact us at:</p>
-            <p><strong>Email:</strong> <span id="email-placeholder"><a href="mailto:quietbyte01@gmail.com">support@medianest.app</a></span></p>
-            <script>
-                (function() {
-                    var u = "quietbyte01";
-                    var d = "gmail.com";
-                    var placeholder = document.getElementById("email-placeholder");
-                    if (placeholder) {
-                        placeholder.innerHTML = '<a href="mailto:' + u + '@' + d + '">support@medianest.app</a>';
-                    }
-                })();
-            </script>
+            <p><strong>Email:</strong> <a href="mailto:quietbyte01@gmail.com">quietbyte01@gmail.com</a></p>
         </div>
 
     </div>
